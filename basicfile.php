@@ -286,7 +286,7 @@ print_r($blogs[2])
 
 <!-- for loops -->
 
-<?php
+<?php 
 
 // $robin=["rithu","divya","vimala"];
 
@@ -299,46 +299,154 @@ print_r($blogs[2])
 // }
 
 // tables for the for loop
-for($i=1; $i<=100; $i=$i+1){
-    echo $i."tables" . '<br />';
-for($j=1; $j<=100; $j=$j+1){
-    echo $i."*".$j."=".$i*$j ."<br />";            
-}
-}
+// for($i=1; $i<=100; $i=$i+1){
+//     echo $i."tables" . '<br />';
+// for($j=1; $j<=100; $j=$j+1){
+//     echo $i."*".$j."=".$i*$j ."<br />";            
+// }
+// }
 ?>
 
 <!-- for each loop -->
 
-<?php
+  <?php  
 
 // for each loop examples
 
-$products=[
-    ["mobile name"=>"vivo","price"=>15000],
-    ["mobile name"=>"oppo","price"=>30000],
-    ["mobile name"=>"realme","price"=>10000],
-    ["mobile name"=>"redmi","price"=>8000],
-    ["mobile name"=>"apple","price"=>115000]
+// $products=[
+//     ["mobile name"=>"vivo","price"=>15000],
+//     ["mobile name"=>"oppo","price"=>30000],
+//     ["mobile name"=>"realme","price"=>10000],
+//     ["mobile name"=>"redmi","price"=>8000],
+//     ["mobile name"=>"apple","price"=>115000]
     
-];
+// ];
 
-foreach($products as $product){
+// foreach($products as $product){
 
-    // if($product["price"]<30000){
-    //     echo "The lowest cost mobile phones are". $product["mobile name"] . "<br />";
-    // }
+//     // if($product["price"]<30000){
+//     //     echo "The lowest cost mobile phones are". $product["mobile name"] . "<br />";
+//     // }
 
-     if($product["price"]<500000 && $product["price"]>8000){
-         echo $product["mobile name"]."<br />";
+//      if($product["price"]<500000 && $product["price"]>8000){
+//          echo $product["mobile name"]."<br />";
 
-     }
+//     }
+// }
+
+// ?>
 
 
+ <!-- key words continue and break -->
 
-}
+<?php
 
+// $products=[
+//         ["mobile name"=>"redmi","price"=>8000],
+//         ["mobile name"=>"apple","price"=>115000],
+//         ["mobile name"=>"vivo","price"=>15000],
+//         ["mobile name"=>"realme","price"=>10000],
+//         ["mobile name"=>"oppo","price"=>30000]
+       
+        
+// ];
+
+
+// foreach($products as $product){
+
+//    if($product["price"]<10000){
+
+//         echo "continue"."<br />";
+//         continue;
+//     }
+
+//     if($product["mobile name"] === "apple"){
+
+//         echo "break"."<br />";
+//         break;
+//     }
+
+//     echo $product["mobile name"]. "<br />";
+// }
 
 ?>
+
+<!-- functions in php -->
+
+<?php
+
+// function sentence_format($products){
+//     echo "{$products["name"]} costs ₹ {$products["price"]} to buy <br />";
+// }
+
+
+// sentence_format(["name"=>"oppo mobile","price"=>"30000"]);
+
+
+// function my_name($fullname){
+   
+//     echo "{$fullname["firstname"]} {$fullname["lastname"]} is my full name <br />"; 
+// }
+
+
+// my_name(["firstname"=>"Robinson","lastname"=>"Rajiv"]);
+
+
+// function using return method
+
+// function my_name($fullname){
+   
+//     return "{$fullname["firstname"]} {$fullname["lastname"]} is my full name <br />"; 
+// }
+
+
+// $myname=my_name(["firstname"=>"Robinson","lastname"=>"Rajiv"]);
+
+// echo $myname;
+
+ ?>
+
+<?php
+
+// we can call the global varaiables into the local variable calling the global keyword
+
+//   $name="robin";
+
+// function my_name(){
+//     global $name;
+//     echo $name;
+// }
+
+// my_name();
+// echo $name
+
+// we can also overwrite the variables
+
+// $name="robin";
+
+// function my_name(){
+//     global $name;
+//     $name="divya";
+//     echo $name;
+// }
+
+// my_name();
+// echo $name
+
+// this is the another way to call the global variable into the local variable reference type we can use any one method
+
+// $name="robin";
+
+// function my_name(&$name){
+//     $name="divya";
+//     echo "good morning $name";
+// }
+
+// my_name($name);
+// echo $name
+?>
+
+
 
 
 
