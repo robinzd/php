@@ -299,13 +299,16 @@ print_r($blogs[2])
 // }
 
 // tables for the for loop
-// for($i=1; $i<=100; $i=$i+1){
+// for($i=1; $i<=10; $i=$i+1){
 //     echo $i."tables" . '<br />';
-// for($j=1; $j<=100; $j=$j+1){
-//     echo $i."*".$j."=".$i*$j ."<br />";            
+// for($j=1; $j<=10; $j=$j+1){
+//     echo $i."*".$j."=".$i*$j ."<br />";  
+    
+    
+    
 // }
 // }
-?>
+// ?>
 
 <!-- for each loop -->
 
@@ -324,15 +327,9 @@ print_r($blogs[2])
 
 // foreach($products as $product){
 
-//     // if($product["price"]<30000){
-//     //     echo "The lowest cost mobile phones are". $product["mobile name"] . "<br />";
-//     // }
-
-//      if($product["price"]<500000 && $product["price"]>8000){
-//          echo $product["mobile name"]."<br />";
-
+//     if($product["price"]<30000){
+//         echo "The lowest cost mobile phones are". $product["mobile name"] . "<br />";
 //     }
-// }
 
 // ?>
 
@@ -444,7 +441,18 @@ print_r($blogs[2])
 
 // my_name($name);
 // echo $name
-?>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
