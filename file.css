@@ -1,0 +1,5 @@
+.card-content.center{
+    overflow-y: auto;
+    max-height: 170px;
+    min-height:170px;
+}

@@ -1,14 +1,7 @@
 <?php
 
-// hiow to connect to the database 
 
-$conn =mysqli_connect('localhost','robin','robin123','robin_project');
-
-
-// check the connection
-if(!$conn){
-    echo "connection error: " . mysqli_connect_error();
-}
+include('db_connection.php');
 
 // write query for all the data from (table:robin)
 $sql='SELECT title,ingredients,id FROM robin ORDER BY created_at';
@@ -28,8 +21,14 @@ mysqli_free_result($result);
 // close connection
 mysqli_close($conn);
 
+// print_r(explode(',', $robin[0]['ingredients']));
+
 
 ?>
+
+
+
+
 
 
 <!DOCTYPE html>
@@ -38,46 +37,63 @@ mysqli_close($conn);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="file.css">
+    <title>Pizza Shop</title>
 </head>
 <body>
+   <?php include('header.php');?>
 
-<h1 align="center">Robin project!</h1>
 
- <!-- rendering the data from the database to the browser -->
- <h2>
-<div class="table">
-<?php
+<h4 class="center gret-text">Pizzas!</h4>
 
-foreach($robin as $robi){
-    echo $robi["title"];
+<div class="container">
+    <div class='row'>
 
-}
-    
-?>
+
+
+    <?php foreach($robin as $robi): ?> 
+
+        <div class="col s6 md3">
+       
+        <div class="card">
+         <div class="card z-depth-0">
+             <div class="card-content center">
+                 <h6><?php echo htmlspecialchars($robi['title']);?></h6>
+                 <ul>
+                     <?php foreach(explode(',', $robi['ingredients']) as $ing): ?>
+                        
+                        <li><?php echo htmlspecialchars($ing);?></li>
+                         
+                        <?php endforeach; ?>
+
+                     
+                 </ul>
+             </div>
+             <div class="card-action right-align">
+                 <a class="brand-text" href="details.php?id=<?php echo $robi['id']?>">more info</a>
+             </div>
+         </div>   
+        </div>
+
+        </div>
+
+        <?php endforeach; ?>
+
+    </div>
 </div>
-</h2>
- <div>
-  <ul>
-  <?php 
-  
-  foreach(explode(",",$robi["ingredients"])as$ing){
-      echo $ing;
-  }
-  
 
-  ?>
-  <ul>
-</div>    
-
-
-
-
+<?php include('footer.php');?>
 
 
     
 </body>
 </html>
+
+
+
+
+
+
 
 
 

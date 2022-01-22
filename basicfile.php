@@ -167,11 +167,11 @@ echo $age;
 <!-- integer functions -->
 <!-- <?php
 
- $pi=3.91;
+//  $pi=3.91;
 
- echo floor($pi);
- echo ceil($pi);
- echo pi();
+//  echo floor($pi);
+//  echo ceil($pi);
+//  echo pi();
 
  ?> -->
 
@@ -179,28 +179,28 @@ echo $age;
 
  <!-- <?php
 
- $names=["robin","adithyan","regu"];
+//  $names=["robin","adithyan","regu"];
 
- echo $age[2];
+//  echo $age[2];
 
 // it is the another way to print the array
 
-print_r($names);
+// print_r($names);
 
 // to join a new array
 
 $names[]="raman";
 
-print_r($names);
+// print_r($names);
 
 
 array_push( $names,"rajan");
 
-print_r($names);
+// print_r($names);
 
 $names[1]="arthi";
 
-print_r($names);
+// print_r($names);
 
 
 ?> -->
@@ -209,12 +209,12 @@ print_r($names);
 <!-- to join the two index array -->
 <!-- <?php
 
-$names1=["robin","andrea","hansika"];
-$names2=["naynthara","priyanka"];
+// $names1=["robin","andrea","hansika"];
+// $names2=["naynthara","priyanka"];
 
-$names3=array_merge($names1,$names2);
+// $names3=array_merge($names1,$names2);
 
-print_r($names3);
+// print_r($names3);
 
 ?> -->
 
@@ -223,25 +223,25 @@ print_r($names3);
 
 <!-- <?php 
 
-$names=["shawn"=>"black","robin"=>"white","divya"=>"pure white"];
-echo $names["robin"];
-print_r($names);
+// $names=["shawn"=>"black","robin"=>"white","divya"=>"pure white"];
+// echo $names["robin"];
+// print_r($names);
 
-// to joining the new array
-$names["aswinal"]="yellow";
-print_r($names);
+// // to joining the new array
+// $names["aswinal"]="yellow";
+// print_r($names);
 
-// to overwrite the arrays
-$names=["shawn"=>"black","robin"=>"white","divya"=>"pure white"];
-$names["robin"]="pink";
-print_r($names);
+// // to overwrite the arrays
+// $names=["shawn"=>"black","robin"=>"white","divya"=>"pure white"];
+// $names["robin"]="pink";
+// print_r($names);
 
 
 // to merging two array
-$names=["shawn"=>"black","robin"=>"white","divya"=>"pure white"];
-$names2=["venky"=>"white","vicky"=>"brown"];
-$fullnames=array_merge($names,$names2);
-print_r($fullnames);
+// $names=["shawn"=>"black","robin"=>"white","divya"=>"pure white"];
+// $names2=["venky"=>"white","vicky"=>"brown"];
+// $fullnames=array_merge($names,$names2);
+// print_r($fullnames);
  ?> -->
 
 <!-- multi dimensional array -->
@@ -264,22 +264,22 @@ print_r($fullnames);
 
 
 <!-- <?php
-$blogs=[
-["shawn"=>"black","robin"=>"white","divya"=>"pure white"],
-["venky"=>"white","vicky"=>"brown"],
-["mano"=>"peach","vivek"=>"blue"]
-];
+// $blogs=[
+// ["shawn"=>"black","robin"=>"white","divya"=>"pure white"],
+// ["venky"=>"white","vicky"=>"brown"],
+// ["mano"=>"peach","vivek"=>"blue"]
+// ];
 
-// to finding the array
-print_r($blogs[1]["vicky"]);
+// // to finding the array
+// print_r($blogs[1]["vicky"]);
 
-// to joining the array
-$blogs[1]["vignesh"]="puer green";
-print_r($blogs[1]);
+// // to joining the array
+// $blogs[1]["vignesh"]="puer green";
+// print_r($blogs[1]);
 
-// to delete the array
-array_pop($blogs[2]);
-print_r($blogs[2])
+// // to delete the array
+// array_pop($blogs[2]);
+// print_r($blogs[2])
 ?> -->
 
 <!-- loops -->
@@ -441,6 +441,17 @@ print_r($blogs[2])
 
 // my_name($name);
 // echo $name
+
+// ?>
+
+<?php
+
+// ternary operators 
+
+$score=20;
+
+$val=$score < 10 ? 'high score!' :  'low score :(';
+echo $val;
 
 
 
